@@ -1,0 +1,9 @@
+@use "../foundation/mixin";
+
+.l-main__wrapper{
+    @include mixin.mq-up('pc') {
+        width: 100%;
+        height: 100%;
+        display:flex;
+    }
+}

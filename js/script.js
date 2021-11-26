@@ -1,0 +1,20 @@
+$('.c-header__menu-btn').on('click',function(){
+      $('.l-sidebar').addClass('open');
+      $('.l-sidebar__drawer-bg').fadeToggle();
+      $('html').css('overflow','hidden');
+    }
+  );
+  $('.c-menu__btn-close').on('click',function(){
+    $('.l-sidebar').removeClass('open');
+    $('.l-sidebar__drawer-bg').fadeToggle();
+    $('html').css('overflow','');
+  }
+);
+
+  $('.l-sidebar__drawer-bg').on('click',function(){
+      $(this).fadeToggle();
+      $('.c-header__menu-btn').removeClass('open');
+      $('.l-sidebar').removeClass('open');
+      $('html').css('overflow','');   
+    }
+  );
