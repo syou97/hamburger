@@ -40,3 +40,20 @@
         transform: rotate(45deg);
     }
 }
+
+.c-archive__btn{
+    background: #fff;
+    color: #707070;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 15px 20px;
+    width: 50%;
+    max-width: 163px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    @include mixin.mq-up('pc') {
+        width: 70%;
+        max-width: 292px;
+    }
+}

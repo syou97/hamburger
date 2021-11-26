@@ -1,34 +1,91 @@
 @use "../../foundation/mixin";
-.p-main{
-    @include mixin.mq-up('pc') {
-        grid-area:main;
-    }
-}
+
 .p-main__tit{
-    background: url(../img/mainvisual-sp@2x.jpg)no-repeat;
+    background-image: url(../img/mainvisual-sp@2x.jpg);
     background-size: cover;
     background-position: center center;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-flow: column;
     width: 100%;
     height: 285px;
     padding-left: 25px;
     margin-bottom: 20px;
+    @include mixin.mq-up('tab'){
+        padding-left: 85px;
+    }
     h2{
         color: #FFFFFF;
         font-size: 3.6rem;
         font-weight: bold;
+        position: relative;
     }
     @include mixin.mq-up('tab'){
-        background: url(../img/mainvisual-pc@2x.jpg)no-repeat;
+        background: url(../img/mainvisual-pc@2x.jpg);
         background-size: cover;
         background-position: center center;
-        margin-bottom: 120px;
+        margin-bottom: 40px;
     }
     @include mixin.mq-up('pc') {
         height: 530px;
+        margin-bottom: 120px;
     }
 }
+.p-main__tit__active{
+    background-image: url(../img/page-title_arcive@2x.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    @include mixin.mq-up('pc'){
+        height: 239px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.5);
+    }
+    span{
+        font-size: 1.6rem;
+        color: #fff;
+        position: relative;
+        font-weight: bold;
+        display: block;
+        margin-top: 7px;
+        @include mixin.mq-up('tab'){
+            display: inline-block;
+            margin-top: 0;
+            margin-left: 20px;
+            vertical-align: middle;
+        }
+    }
+}
+.p-main__tit__single{
+    background-image: url(../img/single-header.jpg);
+    background-size: cover;
+    background-position: center center;
+    @include mixin.mq-up('tab') {
+        background-image: url(../img/single-header-pc.jpg);
+        margin-bottom: 40px;
+    }
+    @include mixin.mq-up('pc') {
+        margin-bottom: 60px;
+    }
+}
+
+.p-main__tit__page{
+    background-image: url(../img/shop.jpg);
+    background-size: cover;
+    background-position: center center;
+    @include mixin.mq-up('tab') {
+        background-image: url(../img/shop-pc.jpg);  
+    }
+}
+
+
 .p-main__menu{
     padding: 0 20px;
     margin-bottom: 60px;

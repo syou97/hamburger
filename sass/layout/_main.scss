@@ -7,3 +7,14 @@
         display:flex;
     }
 }
+.l-contents{
+    padding: 0 20px;
+    margin:0 auto 184px;
+    @include mixin.mq-up('tab') {
+        width: 88%;
+        margin-bottom: 228px;
+    }
+    @include mixin.mq-up('pc') {
+        margin-bottom: 353px;
+    }
+}

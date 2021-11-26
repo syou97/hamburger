@@ -14,13 +14,16 @@ layout
 /***************************************
 compornent
 ****************************************/
-
+@use "object/component/button";
+@use "object/component/menu";
+@use "object/component/pagenavi";
 /***************************************
-object
+project
 ****************************************/
 @use "object/project/mainparts";
+@use "object/project/active";
+@use "object/project/post";
 
 /***************************************
-object
+utility
 ****************************************/
-@use "object/component/button";

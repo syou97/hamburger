@@ -1,0 +1,36 @@
+.pager{
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 40px;
+    li{
+        display: inline;
+        margin: 0 2px;
+        padding: 0;
+        display: inline-block;
+        border: 1px solid #707070;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        position: relative;
+        a{
+            vertical-align: middle;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+    }
+    .pre,.next,.nmber{
+        border: none;
+    }
+    .active{
+        background: #3C2B1C;
+        color: #fff;
+    }
+  }
+  
