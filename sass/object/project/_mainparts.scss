@@ -30,61 +30,63 @@
         height: 530px;
         margin-bottom: 120px;
     }
-}
-.p-main__tit__active{
-    background-image: url(../img/page-title_arcive@2x.jpg);
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-    @include mixin.mq-up('pc'){
-        height: 239px;
-    }
-    &::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0,0,0,0.5);
-    }
-    span{
-        font-size: 1.6rem;
-        color: #fff;
+
+
+    &__archive{
+        background-image: url(../img/page-title_arcive@2x.jpg);
+        background-size: cover;
+        background-position: center center;
         position: relative;
-        font-weight: bold;
-        display: block;
-        margin-top: 7px;
-        @include mixin.mq-up('tab'){
-            display: inline-block;
-            margin-top: 0;
-            margin-left: 20px;
-            vertical-align: middle;
+        @include mixin.mq-up('pc'){
+            height: 239px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        span{
+            font-size: 1.6rem;
+            color: #fff;
+            position: relative;
+            font-weight: bold;
+            display: block;
+            margin-top: 7px;
+            @include mixin.mq-up('tab'){
+                display: inline-block;
+                margin-top: 0;
+                margin-left: 20px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &__single{
+        background-image: url(../img/single-header.jpg);
+        background-size: cover;
+        background-position: center center;
+        @include mixin.mq-up('tab') {
+            background-image: url(../img/single-header-pc.jpg);
+            margin-bottom: 40px;
+        }
+        @include mixin.mq-up('pc') {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__page{
+        background-image: url(../img/shop.jpg);
+        background-size: cover;
+        background-position: center center;
+        @include mixin.mq-up('tab') {
+            background-image: url(../img/shop-pc.jpg);  
         }
     }
 }
-.p-main__tit__single{
-    background-image: url(../img/single-header.jpg);
-    background-size: cover;
-    background-position: center center;
-    @include mixin.mq-up('tab') {
-        background-image: url(../img/single-header-pc.jpg);
-        margin-bottom: 40px;
-    }
-    @include mixin.mq-up('pc') {
-        margin-bottom: 60px;
-    }
-}
-
-.p-main__tit__page{
-    background-image: url(../img/shop.jpg);
-    background-size: cover;
-    background-position: center center;
-    @include mixin.mq-up('tab') {
-        background-image: url(../img/shop-pc.jpg);  
-    }
-}
-
 
 .p-main__menu{
     padding: 0 20px;
@@ -94,51 +96,52 @@
         display: flex;
         justify-content: space-around;
       }
-}
-.p-main__menu-list{
-    padding: 3%;
-    margin-bottom: 20px;
-    width: 100%;
-    @include mixin.mq-up('tab') {
-        width: 48%;
-    }
-    &.-takeout{
-        background: url(../img/takeout.jpg)no-repeat;
-        background-size: cover;
-        background-position: center center;
-    }
-    &.-eatin{
-        background: url(../img/eatin.jpg);
-        background-size: cover;
-        background-position: center center;
-    }
-    dl{
-        background: #FFFFFF;
-        opacity: .8;
-        padding: 3% 3% 9% 3%;
-        margin-bottom: 3%;
-        dt{
-            font-size: 2.2rem;
+      &-list{
+            padding: 3%;
             margin-bottom: 20px;
-        }
-       }
-    h2{
-       font-size: 4.4rem;
-       font-weight: bold;
-       color: #FFFFFF;
-       position: relative;
-       margin-bottom: 200px;
-       &::after{
-           content: "";
-           position: absolute;
-           display: block;
-           width: 35px;
-           height: 3px;
-           background: #FFFFFF;
-           bottom: -18px;
-           left: 0;
-       }
-    }
+            width: 100%;
+            @include mixin.mq-up('tab') {
+                width: 48%;
+            }
+            &.-takeout{
+                background: url(../img/takeout.jpg)no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            &.-eatin{
+                background: url(../img/eatin.jpg);
+                background-size: cover;
+                background-position: center center;
+            }
+            dl{
+                background: #FFFFFF;
+                opacity: .8;
+                padding: 3% 3% 9% 3%;
+                margin-bottom: 3%;
+                dt{
+                    font-size: 2.2rem;
+                    margin-bottom: 20px;
+                }
+               }
+            h2{
+               font-size: 4.4rem;
+               font-weight: bold;
+               color: #FFFFFF;
+               position: relative;
+               margin-bottom: 200px;
+               &::after{
+                   content: "";
+                   position: absolute;
+                   display: block;
+                   width: 35px;
+                   height: 3px;
+                   background: #FFFFFF;
+                   bottom: -18px;
+                   left: 0;
+               }
+            }
+}
+
 }
 .p-map{
     position: relative;
@@ -152,7 +155,7 @@
         padding-left: 0;
         padding-right: 0;
     }
-    section{
+    article{
         font-size: 1.4rem;
         line-height: 2;
         @include mixin.mq-up('pc') {

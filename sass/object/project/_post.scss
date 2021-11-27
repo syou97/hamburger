@@ -1,168 +1,168 @@
 @use "../../foundation/mixin";
 
-.p-post__h2{
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    @include mixin.mq-up('tab'){
-        font-size: 3.6rem;
+.p-post{
+    &__h2{
+        font-size: 2.8rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+        @include mixin.mq-up('tab'){
+            font-size: 3.6rem;
+        }
     }
-
-}
-.p-post__paragraph{
-    line-height: 1.5;
-    margin-bottom: 34px;
-}
-
-.p-post__h3{
+    &__paragraph{
+        line-height: 1.5;
+        margin-bottom: 34px;
+    }
+    &__h3{
     font-size: 2.4rem;
     font-weight: bold;
     margin-bottom: 30px;
     @include mixin.mq-up('tab'){
         font-size: 2.8rem;
-    }
-}
-.p-post__h4,.p-post__h5,.p-post__h6{
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-.p-post__blockquote{
-    background: #F5F5F5;
-    line-height: 1.5;
-    padding: 30px 20px;
-    margin-bottom: 30px;
-    p{
-        margin-bottom: 30px;
-    }
-    cite{
-        a{
-            color: #4A6C9B;
-            text-decoration-line: underline;
         }
     }
-}
-.p-post__picture{
-    &_post img{
-        width: 100%;
-        height: 124px;
-        object-fit: cover;
-        object-position: bottom;
-        margin-bottom: 30px;
-        @include mixin.mq-up('tab'){
-            height: 264px;
-        }
-        @include mixin.mq-up('pc'){
-            height: 500px;
-        }
+    &__4,&__h5,&__h6{
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 30px;  
     }
-    &_txt{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+    &__blockquote{
+        background: #F5F5F5;
         line-height: 1.5;
+        padding: 30px 20px;
         margin-bottom: 30px;
+        p{
+            margin-bottom: 30px;
+        }
+        cite{
+            a{
+                color: #4A6C9B;
+                text-decoration-line: underline;
+            }
+        }
+    }
+
+    &__picture{
+        &_post img{
+            width: 100%;
+            height: 124px;
+            object-fit: cover;
+            object-position: bottom;
+            margin-bottom: 30px;
+            @include mixin.mq-up('tab'){
+                height: 264px;
+            }
+            @include mixin.mq-up('pc'){
+                height: 500px;
+            }
+        }
+        &_txt{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            @include mixin.mq-up('tab'){
+                margin-bottom: 60px;
+            }
+            img{
+                width: 45%;
+            }
+            p{
+                width: 51%;
+            }
+        }
+        &__center{
+            text-align: center;
+            margin-bottom: 30px;
+            img{
+                max-width: 267px;
+                @include mixin.mq-up('tab'){
+                    max-width: 50%;
+                    margin-bottom: 80px;
+                }
+            }
+        }
+        &__tile{
+            @include mixin.mq-up('tab'){
+                display: flex;
+                flex-wrap: wrap;
+                margin: -10px -5px 60px;
+            }
+            img{
+                margin-bottom: 20px;
+                display: block;
+                @include mixin.mq-up('tab'){
+                    width: 50%;
+                    padding: 10px 5px 0px;
+                    margin-bottom: 0;
+                }
+                @include mixin.mq-up('pc'){
+                    width: 33.333%;
+                }
+            }
+        }
+    }
+    &__list{
+        margin-bottom: 20px;
         @include mixin.mq-up('tab'){
             margin-bottom: 60px;
         }
-        img{
-            width: 45%;
-        }
-        p{
-            width: 51%;
-        }
-    }
-    &__center{
-        text-align: center;
-        margin-bottom: 30px;
-        img{
-            max-width: 267px;
-            @include mixin.mq-up('tab'){
-                max-width: 50%;
-                margin-bottom: 80px;
-            }
-        }
-    }
-    &__tile{
-        @include mixin.mq-up('tab'){
-            display: flex;
-            flex-wrap: wrap;
-            margin: -10px -5px 60px;
-        }
-        img{
-            margin-bottom: 20px;
-            display: block;
-            @include mixin.mq-up('tab'){
-                width: 50%;
-                padding: 10px 5px 0px;
-                margin-bottom: 0;
-            }
-            @include mixin.mq-up('pc'){
-                width: 33.333%;
-            }
-        }
-    }
-}
-.p-post__list{
-    margin-bottom: 20px;
-    @include mixin.mq-up('tab'){
-        margin-bottom: 60px;
-    }
-    ol{
-        margin-bottom: 20px;
-        list-style-position:inside;
-        li{
-            list-style-type: decimal;
-        }
         ol{
-            padding-top: 20px;
-            margin-left: 1em;
+            margin-bottom: 20px;
+            list-style-position:inside;
+            li{
+                list-style-type: decimal;
+            }
+            ol{
+                padding-top: 20px;
+                margin-left: 1em;
+            }
         }
-    }
-    ul{
-        margin-bottom: 20px;
-        margin-bottom: 20px;
         ul{
-            padding-top: 20px;
-            margin-left: 1em;
+            margin-bottom: 20px;
+            margin-bottom: 20px;
+            ul{
+                padding-top: 20px;
+                margin-left: 1em;
+            }
+        }
+    
+    }
+    &__code{
+        background: #F5F5F5;
+        width: 100%;
+        margin-bottom: 20px;
+        @include mixin.mq-up('tab'){
+            margin-bottom: 60px;
         }
     }
 
-}
-.p-post__code{
-    background: #F5F5F5;
-    width: 100%;
-    margin-bottom: 20px;
-    @include mixin.mq-up('tab'){
-        margin-bottom: 60px;
+    &__table{
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 40px;
+        td {
+            border: 1px solid #707070;
+            padding: 20px;
+        }
+    
     }
-}
-
-.p-post__table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 40px;
-    td {
+    &__button{
+        width: 100%;
+        height: 80px;
+        border-radius: 20px;
+        background: linear-gradient(#f2ede9 0%, #ded8d3 100%);
         border: 1px solid #707070;
-        padding: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        @include mixin.mq-up('tab'){
+            width: 429px;
+        }
     }
 
-}
-.p-post__button{
-    width: 100%;
-    height: 80px;
-    border-radius: 20px;
-    background: linear-gradient(#f2ede9 0%, #ded8d3 100%);
-    border: 1px solid #707070;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-    @include mixin.mq-up('tab'){
-        width: 429px;
+    &__bold{
+        font-weight: bold;
     }
-}
-
-.p-post__bold{
-    font-weight: bold;
 }
