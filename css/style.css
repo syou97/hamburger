@@ -481,17 +481,6 @@ a {
   padding-left: 36px;
   position: relative;
 }
-.l-header__form__btn {
-  width: 20.8%;
-  max-width: 136px;
-  height: 46px;
-  border-radius: 10px;
-  background: linear-gradient(#f2ede9 0%, #ded8d3 100%);
-  border: 1px solid #707070;
-  font-weight: bold;
-  color: #707070;
-  text-align: center;
-}
 
 .l-footer {
   background: #9D8670;
@@ -676,6 +665,18 @@ a {
     width: 70%;
     max-width: 292px;
   }
+}
+
+.c-btn--brown--gradation {
+  width: 20.8%;
+  max-width: 136px;
+  height: 46px;
+  border-radius: 10px;
+  background: linear-gradient(#f2ede9 0%, #ded8d3 100%);
+  border: 1px solid #707070;
+  font-weight: bold;
+  color: #707070;
+  text-align: center;
 }
 
 .c-menu {
@@ -904,23 +905,23 @@ a {
     padding-right: 0;
   }
 }
-.p-map article {
+.p-map dl {
   font-size: 1.4rem;
   line-height: 2;
 }
 @media screen and (min-width: 1025px) {
-  .p-map article {
+  .p-map dl {
     width: 61.96%;
     padding: 0 8%;
   }
 }
-.p-map article h2 {
+.p-map dl dt {
   font-size: 3rem;
   font-weight: bold;
   position: relative;
   margin-bottom: 40px;
 }
-.p-map article h2::after {
+.p-map dl dt::after {
   content: "";
   position: absolute;
   display: block;

@@ -155,14 +155,14 @@
         padding-left: 0;
         padding-right: 0;
     }
-    article{
+    dl{
         font-size: 1.4rem;
         line-height: 2;
         @include mixin.mq-up('pc') {
             width: 61.96%;
             padding: 0 8%;
         }
-    h2{
+    dt{
         font-size: 3.0rem;
         font-weight: bold;
         position: relative;
